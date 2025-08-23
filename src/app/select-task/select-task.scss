@@ -1,0 +1,29 @@
+.widgets-button, .pokemons-button {
+  height: 400px;
+  border-radius: 5%;
+  border: 1px solid lightgray;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid gray;
+    cursor: pointer;
+  }
+
+  &:not(:hover) {
+    box-shadow: none;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.widgets-button {
+  background: #DB2949;
+  background: linear-gradient(0deg, rgba(219, 41, 73, 1) 0%, rgba(231, 111, 132, 1) 11%, rgba(255, 255, 255, 1) 100%);
+}
+
+.pokemons-button {
+  background: #000000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(238, 64, 53, 1) 20%, rgba(255, 255, 255, 1) 50%);
+}

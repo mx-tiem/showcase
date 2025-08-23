@@ -1,0 +1,43 @@
+<owl-carousel-o [options]="customOptions">
+  @for (image of pokemon.images; track $index) {
+    <ng-template carouselSlide>
+      <img [src]="image">
+    </ng-template>
+  }
+</owl-carousel-o>
+<div class="container">
+  <div class="row text-center">
+    <h1>{{ pokemon.name }}</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row border-bottom">
+    <div class="col-4 text-center border-end">
+      <b>Height:</b> {{ pokemon.height }}
+    </div>
+    <div class="col-4 text-center border-end">
+      <b>Weight:</b> {{ pokemon.weight }}
+    </div>
+    <div class="col-4 text-center">
+      <b>Type:</b> {{ pokemon.type }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 p-3">
+      <div class="row">
+        <h4>Abilities:</h4>
+        <p>{{ pokemon.abilities.join(', ') }}</p>
+      </div>
+      <div class="row">
+        <h4>Stats</h4>
+        @for (stat of pokemon.stats; track $index) {
+          <p><b>{{ upperCaseString(getStatKey(stat)) }}:</b> {{getStatValue(stat)}} | <b>Effort</b>: {{ stat.effort }}</p>
+        }
+      </div>
+    </div>
+    <div class="col-8 p-3 border-start">
+      <h3>Moves:</h3>
+      <p>{{ pokemon.moves.join(', ') }}</p>
+    </div>
+  </div>
+</div>

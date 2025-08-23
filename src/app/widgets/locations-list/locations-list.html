@@ -1,0 +1,26 @@
+<div class="cointainer pt-3 pb-3 locations-list-container">
+  <p class="text-center">Control: {{ widget.controls }}</p>
+  @for(location of locations; track $index) {
+    <div class="row">
+      <mat-card class="location-card col-10 offset-1" appearance="outlined">
+        <div class="row">
+          <div class="col-10">
+            <mat-card-header>
+              <mat-card-title>{{location.name}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="row">
+                {{ location.description }}
+              </div>
+            </mat-card-content>
+          </div>
+          <div class="col-2 d-flex justify-content-center align-items-center">
+            <button matFab aria-label="Example icon button with a delete icon" (click)="onChangeLocation(location)">
+              <mat-icon>my_location</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  }
+</div>

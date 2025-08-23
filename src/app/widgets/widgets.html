@@ -1,0 +1,29 @@
+<div class="row p-3">
+  <div class="col-2">
+    <button matFab routerLink="/select-task">
+      <mat-icon>home</mat-icon>
+    </button>
+  </div>
+  <div class="col-8 text-center" (click)="openDialog()">
+    <button matButton="filled">New Widget</button>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-10 offset-1 drag-boundary">
+      @for (gridRow of gridRows(); track $index) {
+        <div class="row">
+          @for (gridCell of grid[gridRow]; track $index) {
+            <div [id]="gridCell.gridCellId" class="col-2 grid-box {{!!gridCell.widgetId ? 'reserved-box' : 'empty-box'}}"></div>
+          }
+        </div>
+      }
+
+      @for (widget of allWidgets; track $index) {
+        <app-widget [widget]="widget"
+                    (widgetMoved)="widgetMoved($event)"
+                    (widgetDeleted)="removeWidget($event)"></app-widget>
+      }
+    </div>
+  </div>
+</div>

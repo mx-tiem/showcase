@@ -1,0 +1,16 @@
+@use '@angular/material' as mat;
+
+.pokemon-table{
+  tr:nth-child(even) {
+    background-color: whitesmoke;
+  }
+  tr:hover {
+    background-color: rgb(221, 221, 221);
+    cursor: pointer;
+  }
+}
+
+.pokemon-image {
+  width: 66px;
+  // height: 25px;
+}

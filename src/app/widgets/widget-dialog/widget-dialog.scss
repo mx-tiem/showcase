@@ -1,0 +1,29 @@
+.mat-chart {
+  background-color: #fcf69c;
+  color: dimgray;
+}
+.mat-map {
+  background-color: #92d9f7;
+  color: dimgray;
+}
+.mat-locations {
+  background-color: #55d8c1;
+  color: dimgray;
+}
+.selected {
+  color: black;
+}
+
+.chart-type-button {
+  border: 1px solid black;
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lightgray;
+  }
+}
+
+.selected-chart-type {
+  background-color: lightgreen !important;
+}

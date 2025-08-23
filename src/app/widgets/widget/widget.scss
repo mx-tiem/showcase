@@ -1,0 +1,79 @@
+.widget-container {
+  height: 100px;
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.widget-handle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: move;
+  width: 24px;
+  height: 24px;
+  color: rgb(86, 86, 86);
+  z-index: 999;
+}
+.widget-delete {
+  position: absolute;
+  bottom: 25px;
+  left: 10px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  color: rgb(86, 86, 86);
+  z-index: 999;
+}
+
+.sticky-handle {
+  position: sticky;
+}
+
+.scrollable-widget {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.height-1 {
+  height: 20vh;
+}
+.height-2 {
+  height: 40vh;
+}
+.height-3 {
+  height: 60vh;
+}
+.height-4 {
+  height: 80vh;
+}
+.top-1 {
+  top: 0%;
+}
+.top-2 {
+  top: 25%;
+}
+.top-3 {
+  top: 50%;
+}
+.top-4 {
+  top: 75%;
+}
+.left-1 {
+  left: 0%;
+}
+.left-2 {
+  left: 16.66%;
+}
+.left-3 {
+  left: 33.33%;
+}
+.left-4 {
+  left: 50%;
+}
+.left-5 {
+  left: 66.66%;
+}
+.left-6 {
+  left: 83.33%;
+}

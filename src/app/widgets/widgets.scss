@@ -1,0 +1,19 @@
+.grid-box {
+  height: 20vh;
+
+  &:hover { 
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+.drag-boundary {
+  border: 1px solid gray;
+  position: relative;
+  overflow: hidden;
+}
+.empty-box {
+  border: 1px dotted gray;
+  background-color: rgb(240, 240, 240);
+}
+.reserved-box {
+  border: 1px dotted transparent;
+}
