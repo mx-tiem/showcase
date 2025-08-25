@@ -5,7 +5,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 To install all required dependencies use:
 
 ```bash
-npm i --legacy-peer-deps
+npm i
 ```
 
 ## Development server
